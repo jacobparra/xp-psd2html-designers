@@ -3,6 +3,21 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
 <head>
+	<script type="text/javascript">
+	  WebFontConfig = {
+	    google: { families: [ 'Cabin:400,600,700,400italic,600italic,700italic:latin', 'Gentium+Basic:400,400italic:latin' ] }
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })();
+	</script>
+
 	<meta charset="utf-8">
 	<title>Business Landing Page</title>
 	<meta name="description" content="A simple landing page made for Tuts+ Premium">
@@ -12,7 +27,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<!-- <link rel="stylesheet" href="css/styles.css" /> -->
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,11 +54,13 @@
 
 				<div class="span3">
 
-					<h1 class="logo"><a href="">A simple landing page made for Tuts+ Premium</a></h1>
+					<h1 class="logo"><a href="" class="hide-text">A simple landing page made for Tuts+ Premium</a></h1>
 
 				</div> <!-- end span3 -->
 
 				<div class="span9">
+
+					<a href="" class="button button-top-cta">Get Started FOR Free <span class="icon-small arrow-right"></span></a>
 
 					<ul class="list-top-contact-info">
 						<li>
@@ -49,8 +70,6 @@
 							<span class="icon-small envelope"></span> <a href="mailto:office@mycompany.com">office@mycompany.com</a>
 						</li>
 					</ul>
-
-					<a href="" class="button">Get Started FOR Free <span class="icon-small arrow-right"></span></a>
 
 				</div> <!-- end span9 -->
 
