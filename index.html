@@ -303,7 +303,17 @@
 				<h1>This is an image gallery</h1>
 				<h2>Use the controls on the sides to navigate.</h2>
 
-				<p>This is where the gallery will be.</p>
+				<div class="cycle-slideshow" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-swipe="true">
+			    <img src="http://lorempixel.com/1000/500" alt="Beautiful caption">
+			    <img src="http://lorempixel.com/1000/500/city" alt="The City">
+			    <img src="http://lorempixel.com/1000/500/people" alt="People ">
+
+					<span class="cycle-prev"></span>
+					<span class="cycle-next"></span>
+
+				</div> <!-- end cycle-slideshow -->
+
+				<p id="alt-caption"></p>
 
 				<a href="#top" class="link-go-top">- Go Top -</a>
 
@@ -391,7 +401,9 @@
 	</footer>
 
 	<!-- JavaScript -->
-<!-- 	<script src="js/jquery.js"></script> -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.swipe.min.js"></script>
 
 </body>
 </html>

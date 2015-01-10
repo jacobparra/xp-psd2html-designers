@@ -526,6 +526,91 @@ hr {
 /***********************************************************************************************/
 /* 7. Gallery */
 /***********************************************************************************************/
+.section-gallery {
+	background: url('../images/pattern-light.jpg');
+
+	text-align: center;
+	padding: 3em 0;
+
+	h1 {
+		color: @light-bg-heading-one;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+
+	h2 {
+		color: @light-bg-heading-two;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+
+	.box-shadow(0, -1px, 1px, 0, rgba(0, 0, 0, 0.1));
+}
+
+.cycle-slideshow {
+	margin: 3em auto;
+	width: 100%;
+
+	max-width: 600px;
+
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+
+		.box-shadow(0, 0, 10px, 0, rgba(0, 0, 0, 0.3));
+	}
+}
+
+.cycle-prev,
+.cycle-next {
+	position: absolute;
+
+	width: 42px;
+	height: 42px;
+	display: block;
+
+	background: url('../images/sprites.png');
+
+	cursor: pointer;
+}
+
+.cycle-prev {
+	top: 50%;
+	left: -6em;
+
+	margin-top: -21px;
+
+	background-position: 0 -128px;
+
+	&:hover {
+		background-position: -128px -128px;
+	}
+}
+
+.cycle-next {
+	top: 50%;
+	right: -6em;
+
+	margin-top: -21px;
+
+	background-position: -64px -128px;
+
+	&:hover {
+		background-position: -192px -128px;
+	}
+}
+
+#alt-caption {
+	font: italic 14px/21px @serif-font;
+
+	&::before {
+		content: "- ";
+	}
+
+	&::after {
+		content: " -";
+	}
+}
 
 
 
@@ -537,8 +622,10 @@ hr {
 .section-footer-cta {
 	background: white;
 
+	.box-shadow(0, -1px, 1px, 0, rgba(0, 0, 0, 0.1));
+
 	text-align: center;
-	padding: 3em 0 0 0f;
+	padding: 3em 0 0 0;
 
 	h1 {
 		color: @light-bg-heading-one;
