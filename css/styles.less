@@ -212,7 +212,6 @@ hr {
 
 
 
-
 /***********************************************************************************************/
 /* 2. Main Header */
 /***********************************************************************************************/
@@ -355,6 +354,7 @@ hr {
 
 
 
+
 /***********************************************************************************************/
 /* 4. Big Features */
 /***********************************************************************************************/
@@ -366,7 +366,7 @@ hr {
 
 	h1, h3 {
 		color: @light-bg-heading-one;
-		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5 ))
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
 	}
 
 	h2 {
@@ -392,11 +392,12 @@ hr {
 			margin-bottom: 21px;
 		}
 
-		.icon-big {
+		span[class~="icon-big"] {
 			margin-bottom: 21px;
 		}
 	}
 }
+
 
 
 
@@ -446,7 +447,7 @@ hr {
 			margin-left: 63px;
 		}
 
-		.icon-big {
+		span[class~="icon-big"] {
 			float: left;
 		}
 	}
@@ -505,7 +506,6 @@ hr {
 	}
 }
 
-
 .list-customers {
 	margin-left: 3em;
 
@@ -518,7 +518,6 @@ hr {
 		}
 	}
 }
-
 
 
 
@@ -616,6 +615,7 @@ hr {
 
 
 
+
 /***********************************************************************************************/
 /* 8. Footer CTA */
 /***********************************************************************************************/
@@ -629,12 +629,10 @@ hr {
 
 	h1 {
 		color: @light-bg-heading-one;
-		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
 	}
 
 	h2 {
 		color: @light-bg-heading-two;
-		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
 	}
 }
 
@@ -702,7 +700,7 @@ hr {
 
 
 /***********************************************************************************************/
-/* Buttons */
+/* 10. Buttons */
 /***********************************************************************************************/
 .button {
 	display: inline-block;
@@ -744,7 +742,7 @@ hr {
 
 
 /***********************************************************************************************/
-/* Icons */
+/* 11. Icons */
 /***********************************************************************************************/
 .icon-small {
 	display: inline-block;
@@ -795,13 +793,13 @@ hr {
 
 
 /***********************************************************************************************/
-/* Retina images */
+/* 12. Retina images */
 /***********************************************************************************************/
 @media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 	.logo {
 		a {
 			background: transparent url('../images/logo-retina.png') left center no-repeat;
-			background-size: 133px 267px;
+			background-size: 133px 27px;
 		}
 	}
 
@@ -822,8 +820,10 @@ hr {
 
 
 
+
+
 /***********************************************************************************************/
-/* FOUT (Flash of Unstyled Text) */
+/* 13. FOUT (Flash of Unstyled Text) */
 /***********************************************************************************************/
 .wf-loading * {
 	opacity: 0;
@@ -832,10 +832,166 @@ hr {
 .wf-loading {
 	background: url('../images/ajax-loader.gif') center center no-repeat;
 
-	height: 100%
+	height: 100%;
 }
 
 .wf-active *,
 .wf-inactive * {
+	-webkit-transition: opacity 1s ease-out;
+	-moz-transition: opacity 1s ease-out;
+	-o-transition: opacity 1s ease-out;
 	transition: opacity 1s ease-out;
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* 14. Responsive/adaptive stuff */
+/***********************************************************************************************/
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.logo-container-mobile,
+	.top-container-mobile {
+		width: 100%;
+		display: block;
+
+		float: none;
+	}
+	.logo {
+		a {
+			background-position: center center;
+		}
+	}
+
+	.form-single-field {
+		> p {
+			width: 75%;
+		}
+	}
+
+	.cycle-next,
+	.cycle-prev {
+		position: relative;
+
+		top: auto;
+		left: auto;
+		right: auto;
+		margin-top: 3em;
+		display: inline-block;
+	}
+
+	.cycle-prev {
+		margin-right: .5em;
+	}
+
+	.cycle-next {
+		margin-left: .5em;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.container {
+		padding: 0 2em;
+	}
+
+	.logo-container-mobile,
+	.top-container-mobile {
+		width: 100%;
+		display: block;
+		text-align: center;
+
+		float: none;
+	}
+
+	.logo {
+		a {
+			background-position: center center;
+		}
+	}
+
+	.button-top-cta {
+		float: none;
+	}
+
+	.list-top-contact-info {
+		float: none;
+		width: 100%;
+
+		li {
+			float: none;
+
+			padding-right: 0;
+			margin-right: 0;
+
+			border: none;
+
+			p {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+
+	.form-single-field {
+		> p {
+			width: 75%;
+		}
+	}
+
+	.cycle-next,
+	.cycle-prev {
+		position: relative;
+
+		top: auto;
+		left: auto;
+		right: auto;
+		margin-top: 3em;
+		display: inline-block;
+	}
+
+	.cycle-prev {
+		margin-right: .5em;
+	}
+
+	.cycle-next {
+		margin-left: .5em;
+	}
+
+	.section-customers {
+		blockquote {
+			margin-bottom: 42px;
+		}
+	}
+
+	.list-social-icons {
+		float: none;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	.form-single-field {
+		input[type="submit"] {
+			display: none;
+		}
+
+		input[type="email"],
+		input[type="text"] {
+			padding: 0 1em;
+		}
+	}
+
+	.section-main-cta {
+		blockquote {
+			width: 75%;
+		}
+	}
 }
