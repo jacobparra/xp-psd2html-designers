@@ -818,3 +818,24 @@ hr {
 	}
 }
 
+
+
+
+
+/***********************************************************************************************/
+/* FOUT (Flash of Unstyled Text) */
+/***********************************************************************************************/
+.wf-loading * {
+	opacity: 0;
+}
+
+.wf-loading {
+	background: url('../images/ajax-loader.gif') center center no-repeat;
+
+	height: 100%
+}
+
+.wf-active *,
+.wf-inactive * {
+	transition: opacity 1s ease-out;
+}
