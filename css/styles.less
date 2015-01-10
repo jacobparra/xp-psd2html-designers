@@ -118,9 +118,9 @@ table {
 	box-shadow: @arguments;
 }
 
-.inner-shadow (inset, @x: 0, @y: 0, @blur: 1px, @color: #000) {
-	-webkit-box-shadow: @arguments;
-	box-shadow: @arguments;
+.inner-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+	-webkit-box-shadow: inset @arguments;
+	box-shadow: inset @arguments;
 }
 
 .text-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
@@ -196,6 +196,17 @@ blockquote {
 	}
 }
 
+hr {
+	border: none;
+	height: 1px;
+	background-color: lighten(@border-color, 5%);
+	margin: 3em 0;
+}
+
+.link-go-top {
+	font: italic 14px @serif-font;
+}
+
 
 
 
@@ -251,7 +262,7 @@ blockquote {
 	text-align: center;
 	padding: 3em 0;
 
-	.inner-shadow(inset, 0, -8px, 0, rgba(0, 0, 0, 0.2));
+	.inner-shadow(0, -8px, 0, rgba(0, 0, 0, 0.2));
 
 	h1 {
 		color: white;
@@ -339,6 +350,266 @@ blockquote {
 		}
 	}
 }
+
+
+
+
+
+/***********************************************************************************************/
+/* 4. Big Features */
+/***********************************************************************************************/
+.section-big-features {
+	background: url('../images/pattern-light.jpg');
+
+	text-align: center;
+	padding: 3em 0;
+
+	h1, h3 {
+		color: @light-bg-heading-one;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5 ))
+	}
+
+	h2 {
+		color: @light-bg-heading-two;
+	}
+}
+
+.list-big-features {
+	margin: 3em 0 1.5em 0;
+
+	li {
+		background: white;
+		border: 1px solid @border-color;
+
+		.round(3px);
+		.box-shadow(0, 0, 5px, 0, rgba(0, 0, 0, 0.1));
+
+		padding: 3em 1.5em 1.5em 1.5em;
+
+		margin-bottom: 1.5em;
+
+		h3 {
+			margin-bottom: 21px;
+		}
+
+		.icon-big {
+			margin-bottom: 21px;
+		}
+	}
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* 5. Small Features */
+/***********************************************************************************************/
+.section-small-features {
+	background: url('../images/pattern-dark.jpg');
+
+	text-align: center;
+	padding: 3em 0;
+
+	h1 {
+		color: @dark-bg-heading-one;
+		.text-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0.5));
+	}
+
+	h2, h3 {
+		color: @dark-bg-heading-two;
+		.text-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0.5));
+	}
+
+	.link-go-top {
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.list-small-features {
+	margin: 3em 0 1.5em 0;
+
+	li {
+		color: white;
+		text-align: left;
+
+		margin-bottom: 1.5em;
+
+		h3 {
+			margin-bottom: 21px;
+		}
+
+		h3,
+		p {
+			margin-left: 63px;
+		}
+
+		.icon-big {
+			float: left;
+		}
+	}
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* 6. Customers */
+/***********************************************************************************************/
+.section-customers {
+	background: white;
+
+	text-align: center;
+	padding: 3em 0;
+
+	h1 {
+		color: @light-bg-heading-one;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+
+	h2 {
+		color: @light-bg-heading-two;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+
+	blockquote {
+		position: relative;
+		margin: 0 2em;
+
+		&::before {
+			position: absolute;
+			content: url('../images/blockquote-light-top.png');
+			width: 33px;
+			height: 23px;
+
+			left: -2em;
+			top: 0;
+		}
+
+		&::after {
+			position: absolute;
+			content: url('../images/blockquote-light-bottom.png');
+			width: 33px;
+			height: 23px;
+
+			right: -2em;
+			bottom: 70px;
+		}
+
+		cite {
+			color: @text-color;
+		}
+	}
+}
+
+
+.list-customers {
+	margin-left: 3em;
+
+	li {
+		text-align: left;
+		float: left;
+
+		img {
+			margin: 0 1.5em 1.5em 0;
+		}
+	}
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* 7. Gallery */
+/***********************************************************************************************/
+
+
+
+
+
+/***********************************************************************************************/
+/* 8. Footer CTA */
+/***********************************************************************************************/
+.section-footer-cta {
+	background: white;
+
+	text-align: center;
+	padding: 3em 0 0 0f;
+
+	h1 {
+		color: @light-bg-heading-one;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+
+	h2 {
+		color: @light-bg-heading-two;
+		.text-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+	}
+}
+
+.button-footer-cta {
+	margin: 3em 0 1.5em 0;
+}
+
+
+
+
+
+/***********************************************************************************************/
+/* 9. Footer */
+/***********************************************************************************************/
+.site-footer {
+	padding-bottom: 1.5em;
+}
+
+.list-footer-menu,
+.list-social-icons {
+	li {
+		float: left;
+	}
+}
+
+.list-social-icons {
+	float: right;
+
+	li {
+		margin: 0 0 .75em .75em;
+
+		a {
+			width: 35px;
+			height: 35px;
+			display: block;
+		}
+	}
+}
+
+.twitter,
+.facebook,
+.linkedin,
+.googleplus {
+	background: url('../images/sprites.png');
+}
+
+.twitter {
+	background-position: 0 -192px;
+}
+
+.facebook {
+	background-position: -64px -192px;
+}
+
+.googleplus {
+	background-position: -128px -192px;
+}
+
+.linkedin {
+	background-position: -192px -192px;
+}
+
 
 
 
