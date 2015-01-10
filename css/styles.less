@@ -789,3 +789,32 @@ hr {
 .settings {
 	background-position: -128px -64px;
 }
+
+
+
+
+
+/***********************************************************************************************/
+/* Retina images */
+/***********************************************************************************************/
+@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.logo {
+		a {
+			background: transparent url('../images/logo-retina.png') left center no-repeat;
+			background-size: 133px 267px;
+		}
+	}
+
+	.icon-small,
+	.icon-big,
+	.cycle-prev,
+	.cycle-next,
+	.twitter,
+	.facebook,
+	.linkedin,
+	.googleplus {
+		background: url('../images/sprites-retina.png');
+		background-size: 256px 256px;
+	}
+}
+
